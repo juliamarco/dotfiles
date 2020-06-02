@@ -10,9 +10,8 @@ else
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 endif
 
-Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
-colorscheme one
-set background=dark
+silent! colorscheme onedark
