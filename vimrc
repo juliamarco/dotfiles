@@ -63,3 +63,5 @@ nnoremap gP "*P
 vnoremap gy "*y
 vnoremap gp "*p
 vnoremap gP "*P
+
+nnoremap <silent> <C-L> :nohlsearch <C-R>=has("diff") ? "<Bar>diffupdate" : ""<CR><CR><C-L>
