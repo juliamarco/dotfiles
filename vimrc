@@ -1,3 +1,4 @@
+set autowrite
 set backspace=indent,eol,start
 set backupskip=/tmp/*,/private/tmp/*
 set cmdheight=2
@@ -41,6 +42,7 @@ endif
 Plug 'joshdick/onedark.vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
