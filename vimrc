@@ -5,6 +5,7 @@ set complete+=kspell
 set complete-=i
 set hidden
 set history=1000
+set hlsearch
 set incsearch
 set laststatus=2
 set list
