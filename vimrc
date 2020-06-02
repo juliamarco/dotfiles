@@ -66,3 +66,12 @@ vnoremap gP "*P
 
 nnoremap <silent> <C-L> :nohlsearch <C-R>=has("diff") ? "<Bar>diffupdate" : ""<CR><CR><C-L>
 nnoremap <Space><Space> :FZF<CR>
+
+augroup ReleaseSwapfiles
+  autocmd!
+
+  autocmd BufWritePost,BufReadPost,BufLeave *
+        \ if isdirectory(expand("<amatch>:h")) |
+        \   let &swapfile = &modified |
+        \ endif
+augroup END
