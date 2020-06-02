@@ -33,6 +33,8 @@ git_branch() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 which rbenv >/dev/null && eval "$(rbenv init -)"
 
+export PATH=".git/safe/../../bin:$PATH"
+
 # to make vim behave under xterm
 stty -ixon
 
