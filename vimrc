@@ -82,3 +82,44 @@ augroup ReleaseSwapfiles
         \   let &swapfile = &modified |
         \ endif
 augroup END
+
+let g:rails_projections = {
+      \  "app/controllers/*_controller.rb": {
+      \     "test": [
+      \       "spec/requests/{}_spec.rb",
+      \       "spec/requests/{}_request_spec.rb",
+      \       "spec/controllers/{}_controller_spec.rb",
+      \       "test/controllers/{}_controller_test.rb"
+      \     ],
+      \     "alternate": [
+      \       "spec/requests/{}_spec.rb",
+      \       "spec/requests/{}_request_spec.rb",
+      \       "spec/controllers/{}_controller_spec.rb",
+      \       "test/controllers/{}_controller_test.rb"
+      \     ],
+      \   },
+      \   "app/services/*.rb": {
+      \     "command": "service",
+      \     "test": [
+      \       "spec/services/%s_spec.rb",
+      \       "test/services/%s_test.rb"
+      \     ],
+      \   },
+      \   "app/graphql/*.rb": {
+      \     "command": "graphql",
+      \     "test": [
+      \       "spec/graphql/{}_spec.rb",
+      \       "test/graphql/{}_test.rb"
+      \     ],
+      \   },
+      \   "config/routes.rb": { "command": "routes" },
+      \   "spec/*_spec.rb": {
+      \     "dispatch": "bin/rspec spec/{}_spec.rb`=v:lnum ? ':'.v:lnum : ''`",
+      \   },
+      \   "spec/requests/*_spec.rb": {
+      \     "alternate": "app/controllers/{}_controller.rb"
+      \   },
+      \   "spec/requests/*_request_spec.rb": {
+      \     "alternate": "app/controllers/{}_controller.rb"
+      \   },
+      \ }
