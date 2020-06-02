@@ -39,6 +39,16 @@ else
 endif
 
 Plug 'joshdick/onedark.vim'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
 
